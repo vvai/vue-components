@@ -1,0 +1,88 @@
+// Import theme file firstly
+@import "../../assets/scss/theme";
+
+// Redefine default component's variables you want to change
+$st-icon-width: 22px;
+$st-icon-height: 22px;
+$st-button-default-fill: #4163fb;
+$st-color-mantis: #4163fb;
+
+// Import default component's file with styles
+@import "../../../../components/button/style";
+
+// Add new style things if you want to
+@include b('button') {
+  // New properties here
+  height: 42px;
+  color: $st-color-white;
+  border-radius: 21px;
+  // background: $st-color-primary;
+  // color: $st-color-white;
+  border-color: $st-button-default-fill;
+  // // border-width: 1px;
+
+  &:hover,
+  &:focus {
+    color: $st-color-white;
+    border-color: mix($st-color-black, $st-button-default-fill, $st-button-active-shade-percent);
+    background-color: mix($st-color-black, $st-button-default-fill, $st-button-active-shade-percent);
+  } 
+
+  &:disabled {
+    color: $st-color-white;
+
+    &:hover {
+      color: $st-color-white;
+    }
+  }
+
+  &.st-button--plain {
+    color: $st-button-default-fill;
+    background-color: $st-color-white;
+    border-color: $st-button-default-fill;
+
+    &.st-button--disabled {
+      opacity: 0.6;
+      color: $st-button-default-fill;
+      background-color: $st-color-white;
+      border-color: $st-button-default-fill;
+
+      &:hover {
+        color: $st-button-default-fill;
+        background-color: $st-color-white;
+        border-color: $st-button-default-fill;
+      }
+    }
+  }
+
+  &.st-button--small {
+    height: 32px;
+    padding: 5px 15px;
+    min-width: 90px;
+  }
+
+
+  // :disabled {
+  //   color: black;
+  // }
+
+  // @include m('plain') {
+  //   background-color: $st-color-mantis;
+  //   border: 1px solid $st-color-primary;
+  //   color: $st-color-primary;
+
+  //   &:hover,
+  //   &:focus {
+  //     background-color: $st-color-mantis;
+  //     border-color: $st-color-mantis;
+  //     color: $st-color-white;
+  //   }
+
+  //   &:active {
+  //     background: $st-color-white;
+  //     border-color: mix($st-color-black, $st-color-primary, $st-button-active-shade-percent);
+  //     color: mix($st-color-black, $st-color-primary, $st-button-active-shade-percent);
+  //     outline: none;
+  //   }
+  // }
+}
