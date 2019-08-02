@@ -16,10 +16,7 @@ $st-color-mantis: #4163fb;
   height: 42px;
   color: $st-color-white;
   border-radius: 21px;
-  // background: $st-color-primary;
-  // color: $st-color-white;
   border-color: $st-button-default-fill;
-  // // border-width: 1px;
 
   &:hover,
   &:focus {
@@ -61,28 +58,4 @@ $st-color-mantis: #4163fb;
     min-width: 90px;
   }
 
-
-  // :disabled {
-  //   color: black;
-  // }
-
-  // @include m('plain') {
-  //   background-color: $st-color-mantis;
-  //   border: 1px solid $st-color-primary;
-  //   color: $st-color-primary;
-
-  //   &:hover,
-  //   &:focus {
-  //     background-color: $st-color-mantis;
-  //     border-color: $st-color-mantis;
-  //     color: $st-color-white;
-  //   }
-
-  //   &:active {
-  //     background: $st-color-white;
-  //     border-color: mix($st-color-black, $st-color-primary, $st-button-active-shade-percent);
-  //     color: mix($st-color-black, $st-color-primary, $st-button-active-shade-percent);
-  //     outline: none;
-  //   }
-  // }
 }
